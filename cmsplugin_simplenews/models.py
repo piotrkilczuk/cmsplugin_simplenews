@@ -33,6 +33,8 @@ class SimpleNews(models.Model):
     category = models.ForeignKey(SimpleNewsCategory)
     published = models.DateTimeField()
     
+    objects = multilingual.manager.MultilingualManager()
+    
     class Translation(multilingual.translation.TranslationModel):
         title = models.CharField(max_length=255)
         subtitle = models.CharField(max_length=255, blank=True)
@@ -75,6 +77,7 @@ class SimpleNewsExcerptPlugin(CMSPlugin):
         """Return queryset of news"""
         category_ids = [category.pk for category in self.categories.all()]
         news = SimpleNews.objects.filter(
-            category__in=category_ids
+            category__in=category_ids,
+            translations__language_code=get_current_language()
         ).order_by('-published')
         return news[:self.limit]

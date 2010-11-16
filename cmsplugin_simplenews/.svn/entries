@@ -1,14 +1,14 @@
 10
 
 dir
-6
+8
 svn://svn.hint.pl/cmsplugin_simplenews/trunk/cmsplugin_simplenews
 svn://svn.hint.pl/cmsplugin_simplenews
 
 
 
-2010-09-15T13:25:57.114872Z
-4
+2010-09-23T11:19:10.405230Z
+8
 piotr.kilczuk
 
 
@@ -103,10 +103,10 @@ file
 
 
 
-2010-09-15T13:17:20.941160Z
-87547838d2446fd5a0748b8dcd9b501b
-2010-09-15T13:25:57.114872Z
-4
+2010-11-16T11:34:34.281164Z
+43bcb36d92d879c423fab68a1197226b
+2010-09-23T11:19:10.405230Z
+8
 piotr.kilczuk
 
 
@@ -129,7 +129,7 @@ piotr.kilczuk
 
 
 
-764
+888
 
 __init__.py
 file
@@ -235,37 +235,15 @@ piotr.kilczuk
 
 models.py
 file
-7
 
 
 
-2010-09-23T09:52:02.641454Z
-d1ebb37048ec30f89ced07622ce7073b
-2010-09-23T09:52:41.170203Z
-7
+
+
+743552355f9e5399e908a709543b24c4
+2010-09-23T11:19:10.405230Z
+8
 piotr.kilczuk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2509
 
 cms_plugins.py
 file
