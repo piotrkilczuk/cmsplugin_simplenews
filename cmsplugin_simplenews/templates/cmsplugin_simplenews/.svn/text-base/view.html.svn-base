@@ -1,0 +1,20 @@
+{% extends "two_cols.html" %}
+{% load cms_tags placeholder_tags i18n thumbnail %}
+
+{% block title %}{{ entry }}{% endblock %}
+
+{% block leftCol %}
+	{% placeholder leftCol %}
+	<div class="newsEntry">
+		<img class="largeImage" src="{% thumbnail entry.image 493x320 %}" alt="{{ entry.title }}" />
+		<div class="date">{% trans "Date" %}: {{ entry.published }}</div>
+		<h1>{{ entry.title }}</h1>
+		{% if entry.subtitle %}
+			<div class="subtitle">{{ entry.subtitle }}</div>
+		{% endif %}
+		<div class="lead">{{ entry.lead }}</div>
+		<div class="content">
+			{{ entry.content|safe }}
+		</div>
+	</div>
+{% endblock %}

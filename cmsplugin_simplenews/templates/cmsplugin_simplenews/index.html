@@ -1,0 +1,7 @@
+{% extends "two_cols.html" %}
+{% load cms_tags placeholder_tags i18n thumbnail %}
+
+{% block leftCol %}
+	{% placeholder leftCol %}
+	{% include "cmsplugin_simplenews/simple_news.html" %}
+{% endblock %}

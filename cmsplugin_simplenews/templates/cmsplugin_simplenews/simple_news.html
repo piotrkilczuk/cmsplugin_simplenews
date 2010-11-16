@@ -1,0 +1,24 @@
+{% load i18n thumbnail %}
+
+<div class="simpleNewsList">
+	{% for entry in news %}
+		{% spaceless %}
+		<div class="
+			simpleNewsEntry
+			{% if forloop.first %}
+				first
+			{% endif %} 
+			{% if forloop.last %}
+				last
+			{% endif %}
+		{% endspaceless %}
+		">
+			<a href="{{ entry.get_absolute_url }}"><img src="{% thumbnail entry.image 180x125 %}" alt="{{ entry.title }}" title="{{ entry.title }}" /></a>
+			<h4><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h4>
+			{% if entry.subtitle %}
+				<div class="subtitle">{{ entry.subtitle }}</div>
+			{% endif %}
+			<p>{{ entry.lead }}</p>
+		</div>
+	{% endfor %}
+</div>
